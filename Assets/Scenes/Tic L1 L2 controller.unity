@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 334426712}
   - component: {fileID: 334426711}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Objeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,8 +519,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334426710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0.54, z: -2.2778332}
-  m_LocalScale: {x: 2.4084, y: 2.4084, z: 2.4084}
+  m_LocalPosition: {x: 0.727, y: 2.9212, z: 8.28}
+  m_LocalScale: {x: -0.11463448, y: -0.11463448, z: -0.11463448}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -11538,8 +11538,8 @@ GameObject:
   - component: {fileID: 1519099189}
   - component: {fileID: 1519099188}
   - component: {fileID: 1519099187}
-  - component: {fileID: 1519099186}
   - component: {fileID: 1519099185}
+  - component: {fileID: 1519099186}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC

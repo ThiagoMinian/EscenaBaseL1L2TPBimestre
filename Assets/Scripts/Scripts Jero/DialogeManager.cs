@@ -20,7 +20,7 @@ public class DialogeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && hasTalked == false)
+        if (Input.GetKeyDown(KeyCode.Space) && hasTalked == false)
         {
             NextFrase();
         }   
@@ -36,13 +36,14 @@ public class DialogeManager : MonoBehaviour
             if (!hasTalked)
             {
                 //al entrar activa la UI de dialogo
-                textoDelDialogo.text = "Hola, soy un profe y necesito que me ayudes a salir de aquí";
+                textoDelDialogo.text = "Hola, vas a tener que buscar un obejeto por todo este espacio. ";
             }
 
             else
             {
-                textoDelDialogo.text = "Ya te di las pistas necesarias.";
+                textoDelDialogo.text = "Pista: Mira para arriba y vas a ver un proyector. ";
             }
+
         }
     }
 
