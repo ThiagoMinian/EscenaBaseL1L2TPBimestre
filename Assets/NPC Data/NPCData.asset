@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99aefff78f4deda4fbf0653ef5cab427, type: 3}
-  m_Name: NPCDataCuboRojo
+  m_Name: NPCData
   m_EditorClassIdentifier: 
   dialogueFrases:
-  - Busca las pistas que estan por los laboratorios
-  - Dale, apurate
-  - Busca mejor
-  - Si todavia no pudiste empeza el L2
-  - Esta en donde el profesor escribe
+  - 'Hola, vas a tener que buscar un obejeto por todo este espacio '
+  - 'Pista: Mira para arriba y vas a ver un proyector'
+  - Sigues sin encontrarlo.
   hasTalked: 0
