@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: NPCData
   m_EditorClassIdentifier: 
   dialogueFrases:
+  - Pulsa A para continuar
   - 'Hola, vas a tener que buscar un obejeto por todo este espacio '
   - 'Pista: Mira para arriba y vas a ver un proyector'
+  - 'Con E agarras la silla y con la R la sueltas '
   - Sigues sin encontrarlo.
+  - Ya hablamos
   hasTalked: 0
