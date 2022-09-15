@@ -595,7 +595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334426710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.782, y: 2.9212, z: 8.321}
+  m_LocalPosition: {x: 0.782, y: 2.9212, z: 8.4129}
   m_LocalScale: {x: -0.07666446, y: -0.008043443, z: -0.09645697}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8363,6 +8363,7 @@ GameObject:
   - component: {fileID: 1107075385}
   - component: {fileID: 1103683871}
   - component: {fileID: 1104782175}
+  - component: {fileID: 1106984282}
   m_Layer: 0
   m_Name: Techo.012
   m_TagString: Untagged
@@ -9424,6 +9425,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1106984282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.600006, y: 0.5777229, z: 7.9930577}
+  m_Center: {x: -0.67362666, y: -0.2794662, z: 0.20965123}
 --- !u!1 &1106984283
 GameObject:
   m_ObjectHideFlags: 0
