@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogeManager : MonoBehaviour
+public class DialogueManager1 : MonoBehaviour
 {
     [SerializeField] GameObject dialogueUI;
     [SerializeField] TextMeshProUGUI textoDelDialogo;
@@ -23,12 +23,12 @@ public class DialogeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && hasTalked == false)
         {
             NextFrase();
-        }   
+        }
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("NPC1"))
         {
             frasesDialogo = other.gameObject.GetComponent<NPCBehavior>().Data.dialogueFrases;
             dialogueUI.SetActive(true);
@@ -36,21 +36,21 @@ public class DialogeManager : MonoBehaviour
             if (!hasTalked)
             {
                 //al entrar activa la UI de dialogo
-                textoDelDialogo.text = "Pulsa F para continuar";
+                textoDelDialogo.text = "Mira el proyector de la otra sala";
             }
 
             else
             {
                 textoDelDialogo.text = "Ya hablamos. ";
-            }   
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("NPC1"))
         {
-           //al entrar desactiva la UI de dialogo
+            //al entrar desactiva la UI de dialogo
             dialogueUI.SetActive(false);
         }
     }
@@ -68,6 +68,6 @@ public class DialogeManager : MonoBehaviour
             dialogueUI.SetActive(false);
             hasTalked = true;
         }
-        
+
     }
 }

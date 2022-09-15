@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99aefff78f4deda4fbf0653ef5cab427, type: 3}
-  m_Name: NPCData
+  m_Name: NPCData1
   m_EditorClassIdentifier: 
   dialogueFrases:
-  - Pulsa F para continuar
-  - 'Hola, vas a tener que buscar un obejeto por todo este espacio '
-  - Busca al otro NPC, si quieres una pista
-  - 'Con E agarras la silla y con la R la sueltas '
+  - Mira el proyector de la otra sala
   - Ya hablamos
   hasTalked: 0
