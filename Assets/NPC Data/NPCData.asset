@@ -15,7 +15,8 @@ MonoBehaviour:
   dialogueFrases:
   - Pulsa F para continuar
   - 'Hola, vas a tener que buscar un obejeto por todo este espacio '
-  - Busca al otro NPC, si quieres una pista
+  - Busca una pista por todo el lugar
+  - Ojo! Hay 2 pistas
   - 'Con E agarras la silla y con la R la sueltas '
   - Ya hablamos
   hasTalked: 0
