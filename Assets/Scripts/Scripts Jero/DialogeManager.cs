@@ -41,7 +41,7 @@ public class DialogeManager : MonoBehaviour
 
             else
             {
-                textoDelDialogo.text = "Hola, vas a tener que buscar un obejeto por todo este espacio. ";
+                textoDelDialogo.text = "Ya hablamos. ";
             }   
           
 
