@@ -82,8 +82,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 estoyCayendo();
             }
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
 
-             Anim.SetFloat("VelX", x);
+            Anim.SetFloat("VelX", x);
             Anim.SetFloat("VelY", y);
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -112,7 +114,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
-
 
         private void FixedUpdate()
         {

@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim: {fileID: 0}
   m_IsWalking: 1
   m_WalkSpeed: 2.3
   m_RunSpeed: 3.7
@@ -177,6 +178,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  hasJump: 0
+  jumpForce: 2
+  isGrounded: 0
+  x: 5
+  y: 5
 --- !u!54 &8634970901602863241
 Rigidbody:
   m_ObjectHideFlags: 0
