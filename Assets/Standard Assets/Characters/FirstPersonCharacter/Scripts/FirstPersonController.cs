@@ -11,7 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
-        public Animator Anim;
+       
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -43,11 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        public bool hasJump;
-        public float jumpForce;
-        public bool isGrounded;
-        private Rigidbody RB;
-        public float x, y = 5;
+        
         // Use this for initialization
         private void Start()
         {
@@ -68,25 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             RotateView();
-            if (hasJump)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    Anim.SetBool("Salte", true);
-                    RB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                    isGrounded = false;
-                }
-                Anim.SetBool("tocoSuelo", true);
-            }
-            else
-            {
-                estoyCayendo();
-            }
-            x = Input.GetAxis("Horizontal");
-            y = Input.GetAxis("Vertical");
-
-            Anim.SetFloat("VelX", x);
-            Anim.SetFloat("VelY", y);
+            
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
@@ -102,11 +80,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
-        public void estoyCayendo()
-        {
-            Anim.SetBool("Salte", false);
-            Anim.SetBool("tocoSuelo", false);
-        }
+       
 
         private void PlayLandingSound()
         {
