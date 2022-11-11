@@ -19,9 +19,11 @@ public class AnimatorScript : MonoBehaviour
     [SerializeField] private Transform PlayerCamera;
     [SerializeField] private float Sensativity;
 
+    [SerializeField] private Transform FeetTransform;
     // Start is called before the first frame update
     void Start()
     {
+        hasJump = false;
         RB = GetComponent<Rigidbody>();
     }
 
@@ -36,7 +38,7 @@ public class AnimatorScript : MonoBehaviour
                 RB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 isGrounded = false;
             }
-            Anim.SetBool("tocoSuelo", true);
+            //Anim.SetBool("tocoSuelo", true);
         }
         else
         {
@@ -48,23 +50,22 @@ public class AnimatorScript : MonoBehaviour
         Anim.SetFloat("VelX", x);
         Anim.SetFloat("VelY", y);
 
-        Vector3 transformPosition = new Vector3(x * movementSpeed * Time.deltaTime, 0, y * movementSpeed * Time.deltaTime);
-        transform.position += transformPosition;
-
-
-
-        Vector3 direction = Vector3.forward * y + Vector3.right * x;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotateSpeed * Time.deltaTime);
 
         xRot -= PlayerMouseInput.y * Sensativity;
 
         transform.Rotate(0f, PlayerMouseInput.x * Sensativity, 0f);
         PlayerCamera.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
+
+        Vector3 transformPosition = new Vector3(x * movementSpeed * Time.deltaTime, 0, y * movementSpeed * Time.deltaTime);
+        transform.position += transformPosition;
+
+        Vector3 direction = Vector3.forward * y + Vector3.right * x;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotateSpeed * Time.deltaTime);
     }
 
     public void estoyCayendo()
     {
         Anim.SetBool("Salte", false);
-        Anim.SetBool("tocoSuelo", false);
+        //Anim.SetBool("tocoSuelo", false);
     }
 }
