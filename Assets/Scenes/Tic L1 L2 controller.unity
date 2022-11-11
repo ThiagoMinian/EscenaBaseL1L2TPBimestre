@@ -14008,7 +14008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033458928}
   m_LocalRotation: {x: -0, y: 0.66841274, z: -0, w: -0.7437906}
-  m_LocalPosition: {x: 2.46, y: 0.468, z: 7.37}
+  m_LocalPosition: {x: 2.36, y: 0.76, z: 6.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2033418962}
@@ -14930,6 +14930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033418960}
   - component: {fileID: 2040884530}
+  - component: {fileID: 2033458929}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -14937,6 +14938,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &2033458929
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033458928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6478715
+  m_Height: 1.7754049
+  m_Direction: 1
+  m_Center: {x: -0.020181714, y: 0.38770247, z: 7.177395e-11}
 --- !u!1 &2033458930
 GameObject:
   m_ObjectHideFlags: 0
@@ -15065,7 +15080,13 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed by
+    Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
+    'mixamorig:RightFoot'\n\tTransform 'mixamorig:Head'\n\tTransform 'mixamorig:LeftUpLeg'\n\tTransform
+    'mixamorig:LeftArm'\n\tTransform 'mixamorig:RightHand'\n\tand more ...\n\tFrom
+    animation clip 'Idle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
