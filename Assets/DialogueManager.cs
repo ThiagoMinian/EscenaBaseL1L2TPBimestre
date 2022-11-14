@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] string[] frasesDialogo;
     [SerializeField] int posicionFrase;
     public bool hasTalked;
+    public NPCData NPC;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,11 @@ public class DialogueManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            frasesDialogo = other.gameObject.GetComponent<NPCBehavior>().Data.dialogueFrases;
+            frasesDialogo = NPC.dialogueFrases;
             dialogueUI.SetActive(true);
+            Debug.Log("Entraste");
 
             if (!hasTalked)
             {
