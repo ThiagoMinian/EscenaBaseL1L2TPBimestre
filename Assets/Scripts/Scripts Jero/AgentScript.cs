@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AgentScript : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class AgentScript : MonoBehaviour
     [SerializeField] Transform[] targets;
     [SerializeField] int currentTarget = 0;
     [SerializeField] float arrivingDistance;
+
+    public GameObject Perdiste;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +31,21 @@ public class AgentScript : MonoBehaviour
     void Update()
     {
         agent.destination = targets[currentTarget].position;
-        Patrullaje();
+        perseguir();
+
 
     }
+    public void perseguir()
+    {
+        if (Vector3.Distance(transform.position, destinationTransform.position) < 1)
+        {
+            Perdiste.SetActive(true);
+
+        }
+
+
+    }
+
 
     public void Patrullaje()
     {
