@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: NPCData
   m_EditorClassIdentifier: 
   dialogueFrases:
-  - Pulsa F para continuar
-  - 'Hola, vas a tener que buscar un obejeto por todo este espacio '
-  - Busca una pista por todo el lugar
-  - 'Con E agarras la silla y con la R la sueltas '
-  - En una computadora hay una pista
+  - Pulsa Q para continuar
+  - Hola, ahora estas por entrar a una importante tarea
+  - 'tienes que distraer al ogro por suficiente tiempo '
+  - si lo logras podremos derrotarlo con nuestra arma suprema
+  - buena suerte
   - Ya hablamos
   hasTalked: 0
