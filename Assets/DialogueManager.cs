@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class DialogeManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogueUI;
     [SerializeField] TextMeshProUGUI textoDelDialogo;
@@ -51,7 +51,7 @@ public class DialogeManager : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
         {
             //al entrar desactiva la UI de dialogo
             dialogueUI.SetActive(false);
