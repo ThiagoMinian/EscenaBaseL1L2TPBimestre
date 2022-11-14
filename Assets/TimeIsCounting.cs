@@ -21,9 +21,9 @@ public class TimeIsCounting : MonoBehaviour
         txtCountdown.text = Mathf.Floor(time).ToString();
         time -= Time.deltaTime;
 
-        if (time == 0)
+        if (time <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }
