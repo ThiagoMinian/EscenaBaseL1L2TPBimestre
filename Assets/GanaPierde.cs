@@ -7,7 +7,7 @@ public class GanaPierde : MonoBehaviour
     public GameObject ganaste;
     public GameObject perdiste;
 
-    public TimeIsCounting Timexcvn;
+    public TimeIsCounting tiempo;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +17,18 @@ public class GanaPierde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timexcvn.pierde == true)
+       
+        if (tiempo.pierde == true)
         {
-            Debug.Log(Timexcvn.pierde);
             ganaste.SetActive(true);
             perdiste.SetActive(false);
         }
+
+        if (tiempo.time <= 1)
+        {
+            ganaste.SetActive(true);
+            perdiste.SetActive(false);
+        }
+
     }
 }

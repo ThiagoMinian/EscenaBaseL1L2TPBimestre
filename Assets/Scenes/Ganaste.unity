@@ -907,8 +907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5171b32ca6bb245901e7ee683b73dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 30
   txtCountdown: {fileID: 151251033}
-  pierde: 0
+  pierde: {fileID: 0}
 --- !u!114 &2132634317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ganaste: {fileID: 938422877}
   perdiste: {fileID: 312207355}
-  Timexcvn: {fileID: 2132634316}
+  tiempo: {fileID: 2132634316}
 --- !u!4 &2132634318
 Transform:
   m_ObjectHideFlags: 0
