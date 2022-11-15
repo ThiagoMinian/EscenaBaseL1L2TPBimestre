@@ -9,7 +9,7 @@ public class TimeIsCounting : MonoBehaviour
     float time = 30;
     public Text txtCountdown;
 
-    public bool perdio = false;
+    public bool pierde = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,9 @@ public class TimeIsCounting : MonoBehaviour
         txtCountdown.text = Mathf.Floor(time).ToString();
         time -= Time.deltaTime;
 
-        if (time <= 0)
+        if (time <= 1)
         {
-            perdio = true;
+            pierde = true;
             SceneManager.LoadScene(2);
         }
     }

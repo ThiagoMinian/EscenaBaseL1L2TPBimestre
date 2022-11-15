@@ -17,10 +17,11 @@ public class GanaPierde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timexcvn.perdio == true)
+        if (Timexcvn.pierde == true)
         {
-            ganaste.SetActive(false);
-            perdiste.SetActive(true);
+            Debug.Log(Timexcvn.pierde);
+            ganaste.SetActive(true);
+            perdiste.SetActive(false);
         }
     }
 }

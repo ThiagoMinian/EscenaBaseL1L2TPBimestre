@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AgentScript : MonoBehaviour
 {
@@ -16,8 +17,7 @@ public class AgentScript : MonoBehaviour
     [SerializeField] int currentTarget = 0;
     [SerializeField] float arrivingDistance;
 
-    public GameObject Perdiste;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +39,9 @@ public class AgentScript : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, destinationTransform.position) < 1)
         {
-            Perdiste.SetActive(true);
-
+           
+           
+            SceneManager.LoadScene(2);
         }
 
 
