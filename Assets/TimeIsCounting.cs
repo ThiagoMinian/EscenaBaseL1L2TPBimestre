@@ -27,8 +27,6 @@ public class TimeIsCounting : MonoBehaviour
 
             if (time <= 1)
             {
-
-
                 SceneManager.LoadScene(2);
             }
         }

@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicaPies : MonoBehaviour
-{
-    public AnimatorScript movplayer;
-    // Start is called before the first frame update
-    void Start()
-    {
+//public class LogicaPies : MonoBehaviour
+//{
+//    public bool movplayer;
+//    // Start is called before the first frame update
+//    void Start()
+//    {
         
-    }
+//    }
 
-    // Update is called once per frame
-    void Update()
-    {
+//    // Update is called once per frame
+//    void Update()
+//    {
         
-    }
+//    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        movplayer.hasJump = true;
+//    private void OnTriggerStay(Collider other)
+//    {
+//        movplayer.hasJump = true;
        
-    }
+//    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        movplayer.hasJump = false;
+//    private void OnTriggerExit(Collider other)
+//    {
+//        movplayer.hasJump = false;
 
         
-    }
-}
+//    }
+//}

@@ -22,25 +22,20 @@ public class AgentScript : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
-
-
-
     }
 
     void Update()
     {
-        agent.destination = targets[currentTarget].position;
+        agent.destination = destinationTransform.position;
         perseguir();
+        remainingDistance = Vector3.Distance(transform.position, destinationTransform.position);
 
 
     }
     public void perseguir()
     {
-        if (Vector3.Distance(transform.position, destinationTransform.position) < 1)
+        if (Vector3.Distance(transform.position, destinationTransform.position) < 1.5f)
         {
-           
-           
             SceneManager.LoadScene(2);
         }
 
