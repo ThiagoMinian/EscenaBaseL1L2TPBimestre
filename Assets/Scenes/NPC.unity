@@ -488,6 +488,7 @@ MonoBehaviour:
   frasesDialogo: []
   posicionFrase: 0
   hasTalked: 0
+  NPC: {fileID: 0}
   ayuda: 0
 --- !u!1 &257399598
 GameObject:
@@ -1389,7 +1390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &836222658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14437,6 +14438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b2a6034ce86b14489bafbb677160b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  turnSmoothTime: 0.1
+  turnSmoothVelocity: 0.1
+  speed: 6.5
   Anim: {fileID: 4260846356972825140}
   hasJump: 0
   jumpForce: 2

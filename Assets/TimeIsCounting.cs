@@ -9,6 +9,7 @@ public class TimeIsCounting : MonoBehaviour
     float time = 30;
     public Text txtCountdown;
 
+    public bool perdio = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class TimeIsCounting : MonoBehaviour
 
         if (time <= 0)
         {
+            perdio = true;
             SceneManager.LoadScene(2);
         }
     }
