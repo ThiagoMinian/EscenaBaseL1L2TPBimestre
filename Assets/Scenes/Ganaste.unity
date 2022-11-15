@@ -642,7 +642,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938422877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1.7634, y: 1.7634, z: 1.7634}
   m_Children: []
   m_Father: {fileID: 1331736706}
@@ -650,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00017548, y: 168}
+  m_AnchoredPosition: {x: 28, y: 797}
   m_SizeDelta: {x: 447.9997, y: 115.5636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938422879
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 30
   txtCountdown: {fileID: 151251033}
-  pierde: {fileID: 0}
+  pierde: {fileID: 11400000, guid: ed2f2376de3a74e4bbf4b72f39d1b00e, type: 2}
 --- !u!114 &2132634317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ganaste: {fileID: 938422877}
   perdiste: {fileID: 312207355}
-  tiempo: {fileID: 2132634316}
+  perder: {fileID: 11400000, guid: ed2f2376de3a74e4bbf4b72f39d1b00e, type: 2}
 --- !u!4 &2132634318
 Transform:
   m_ObjectHideFlags: 0

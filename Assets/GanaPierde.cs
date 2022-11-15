@@ -6,8 +6,7 @@ public class GanaPierde : MonoBehaviour
 {
     public GameObject ganaste;
     public GameObject perdiste;
-
-    public TimeIsCounting tiempo;
+    public perdisteData perder;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +17,11 @@ public class GanaPierde : MonoBehaviour
     void Update()
     {
        
-        if (tiempo.pierde == true)
+        if (perder.perdiste == true)
         {
             ganaste.SetActive(true);
             perdiste.SetActive(false);
-        }
 
-        if (tiempo.time <= 1)
-        {
-            ganaste.SetActive(true);
-            perdiste.SetActive(false);
         }
-
     }
 }
