@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class TimeIsCounting : MonoBehaviour
 {
-    float time = 30;
+    public float time = 30;
     public Text txtCountdown;
-
-    public bool pierde = false;
+    public perdisteData pierde;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +23,7 @@ public class TimeIsCounting : MonoBehaviour
 
         if (time <= 1)
         {
-            pierde = true;
+            pierde.perdiste = true;
             SceneManager.LoadScene(2);
         }
     }
