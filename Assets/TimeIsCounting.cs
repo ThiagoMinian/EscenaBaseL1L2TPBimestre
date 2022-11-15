@@ -12,7 +12,7 @@ public class TimeIsCounting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pierde.perdiste = false;
+        pierde.GANASTE = false;
     }
 
     // Update is called once per frame
@@ -21,10 +21,16 @@ public class TimeIsCounting : MonoBehaviour
         txtCountdown.text = Mathf.Floor(time).ToString();
         time -= Time.deltaTime;
 
-        if (time <= 1)
+        if (time <= 2)
         {
-            pierde.perdiste = true;
-            SceneManager.LoadScene(2);
+            pierde.GANASTE = true;
+
+            if (time <= 1)
+            {
+
+
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }

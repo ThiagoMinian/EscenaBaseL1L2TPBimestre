@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d829b87e5bd0a419b1d7bea13237cd, type: 3}
   m_Name: Perdiste
   m_EditorClassIdentifier: 
-  perdiste: 1
+  GANASTE: 1

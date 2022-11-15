@@ -6,5 +6,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="PerdisteData", menuName ="CrearPerdisteData")]
 public class perdisteData : ScriptableObject
 {
-    public bool perdiste;
+    public bool GANASTE;
 }

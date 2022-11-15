@@ -17,11 +17,16 @@ public class GanaPierde : MonoBehaviour
     void Update()
     {
        
-        if (perder.perdiste == true)
+        if (perder.GANASTE == true)
         {
             ganaste.SetActive(true);
             perdiste.SetActive(false);
 
+        }
+        else
+        {
+            ganaste.SetActive(false);
+            perdiste.SetActive(true);
         }
     }
 }
