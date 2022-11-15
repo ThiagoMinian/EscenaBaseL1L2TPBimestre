@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class AnimatorScript : MonoBehaviour
 {
+    public CharacterController controller;
+    public float turnSmoothTime = 0.1f;
+    public float turnSmoothVelocity = 0.1f;
+    public float speed = 6.5f;
+
+
     public Animator Anim;
     public bool hasJump;
     public float jumpForce;
@@ -50,17 +56,12 @@ public class AnimatorScript : MonoBehaviour
         Anim.SetFloat("VelX", x);
         Anim.SetFloat("VelY", y);
 
-
-        xRot -= PlayerMouseInput.y * Sensativity;
-
-        transform.Rotate(0f, PlayerMouseInput.x * Sensativity, 0f);
-        PlayerCamera.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
-
         Vector3 transformPosition = new Vector3(x * movementSpeed * Time.deltaTime, 0, y * movementSpeed * Time.deltaTime);
         transform.position += transformPosition;
 
         Vector3 direction = Vector3.forward * y + Vector3.right * x;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotateSpeed * Time.deltaTime);
+        
     }
 
     public void estoyCayendo()
