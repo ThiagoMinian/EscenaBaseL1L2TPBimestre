@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
-public class DialogeManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogueUI;
     [SerializeField] TextMeshProUGUI textoDelDialogo;
     [SerializeField] string[] frasesDialogo;
     [SerializeField] int posicionFrase;
-    [SerializeField] bool hasTalked;
+    public bool hasTalked;
+    public NPCData NPC;
 
     // Start is called before the first frame update
     void Start()
@@ -20,40 +22,44 @@ public class DialogeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && hasTalked == false)
+        if (Input.GetKeyDown(KeyCode.Q) && hasTalked == false)
         {
             NextFrase();
-        }   
+        }
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            frasesDialogo = other.gameObject.GetComponent<NPCBehavior>().Data.dialogueFrases;
+            frasesDialogo = NPC.dialogueFrases;
             dialogueUI.SetActive(true);
+            Debug.Log("Entraste");
 
             if (!hasTalked)
             {
                 //al entrar activa la UI de dialogo
-                textoDelDialogo.text = "Pulsa F para continuar";
+                textoDelDialogo.text = "Pulsa Q para hablar";
             }
 
             else
             {
-                textoDelDialogo.text = "Ya hablamos. ";
-            }   
+                textoDelDialogo.text = "Ya dije todo";
+            }
+
+
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
         {
-           //al entrar desactiva la UI de dialogo
+            //al entrar desactiva la UI de dialogo
             dialogueUI.SetActive(false);
         }
     }
+    public int ayuda = 0;
 
     void NextFrase()
     {
@@ -62,12 +68,14 @@ public class DialogeManager : MonoBehaviour
             textoDelDialogo.text = frasesDialogo[posicionFrase];
             posicionFrase++;
         }
-
         else
         {
+            ayuda += 1;
             dialogueUI.SetActive(false);
             hasTalked = true;
+            SceneManager.LoadScene(0);
         }
-        
+
     }
 }
+

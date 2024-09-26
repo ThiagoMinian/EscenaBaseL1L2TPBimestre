@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCBehavior : MonoBehaviour
+public class showCursor : MonoBehaviour
 {
-    public NPCData Data;
+    private bool mostrarcursor = true;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (mostrarcursor == true)
+        {
+            Cursor.visible = true;
+        }
     }
 
     // Update is called once per frame
